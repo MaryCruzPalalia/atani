@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="calendario_view" model="ir.ui.view">
+            <field name="name">calendario.lista.view</field>
+            <field name="model">calendar.event</field>
+            <field name="inherit_id" ref="calendar.view_calendar_event_form"></field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='location']" position="replace">   
+                    <field name="location" widget="url"  text='Ubicación'/>   
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
